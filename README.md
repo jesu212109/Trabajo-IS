@@ -1,44 +1,50 @@
 # Proyecto Software - Ingeniería del software
 
-Sistema de Gestión de Actividades Académicas
+# Sistema de Gestión de Actividades Académicas
 
 Este es un sistema diseñado para gestionar y publicitar actividades académicas, como congresos, ponencias, seminarios y talleres. El objetivo principal es proporcionar una plataforma centralizada para la planificación, promoción y gestión de eventos académicos en una institución educativa.
-Funcionalidades Principales
-Roles de Usuario
 
-    Organizador:
-        Creador del congreso y responsable de la planificación inicial.
-        No se encarga de la gestión detallada, esta tarea se delega al Director Académico.
+## Funcionalidades Principales
 
-    Director Académico:
-        Asignado a una actividad académica específica.
-        Informa sobre ponentes, fechas, duración, temática y otros detalles relevantes.
-        Fija aforo, ubicación, precio y derechos de participación.
-        Puede confirmar la preinscripción mediante pago en línea.
+### Roles de Usuario
 
-    Visitantes:
-        Pueden visualizar la información general de los eventos.
-        No tienen la opción de preinscribirse.
+1. **Organizador:**
+   - Creador del congreso y responsable de la planificación inicial.
+   - No se encarga de la gestión detallada; esta tarea se delega al Director Académico.
 
-    Registrados:
-        Pueden realizar preinscripciones si hay aforo disponible.
-        Reciben certificados de asistencia a las actividades preinscritas.
+2. **Director Académico:**
+   - Asignado a una actividad académica específica.
+   - Informa sobre ponentes, fechas, duración, temática y otros detalles relevantes.
+   - Fija aforo, ubicación, precio y derechos de participación.
+   - Puede confirmar la preinscripción mediante pago en línea.
 
-Sistema de Preinscripción y Mailing
+3. **Visitantes:**
+   - Pueden visualizar la información general de los eventos.
+   - No tienen la opción de preinscribirse.
 
-    Los usuarios registrados pueden preinscribirse en eventos.
-    Certificados de asistencia se generan para preinscritos.
-    Se envían agradecimientos por correo electrónico a participantes.
+4. **Registrados:**
+   - Pueden realizar preinscripciones si hay aforo disponible.
+   - Reciben certificados de asistencia a las actividades preinscritas.
 
-Seguridad y Acceso
+### Sistema de Preinscripción y Mailing
 
-    Usuarios seguros con contraseñas cifradas.
-    Protección de datos y privacidad.
-    Gestión de roles para la restricción de acceso.
+- Los usuarios registrados pueden preinscribirse en eventos.
+- Certificados de asistencia se generan para preinscritos.
+- Se envían agradecimientos por correo electrónico a participantes.
 
-Concurrencia y Retención de Datos
+### Seguridad y Acceso
 
-    Manejo de concurrencia para evitar conflictos en la preinscripción y acceso simultáneo a datos.
-    Retención de datos para un seguimiento histórico de eventos.
+- Usuarios seguros con contraseñas cifradas.
+- Protección de datos y privacidad.
+- Gestión de roles para la restricción de acceso.
+
+### Concurrencia y Retención de Datos
+
+- Manejo de concurrencia para evitar conflictos en la preinscripción y acceso simultáneo a datos.
+- Retención de datos para un seguimiento histórico de eventos.
+
+---
+
+Este sistema ofrece una solución integral para la gestión de actividades académicas, asegurando la privacidad, seguridad y eficiencia en el proceso de planificación y ejecución de eventos educativos.
 
 
