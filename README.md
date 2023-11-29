@@ -1,5 +1,3 @@
-# Proyecto Software - Ingeniería del software
-
 # Sistema de Gestión de Actividades Académicas
 
 Este es un sistema diseñado para gestionar y publicitar actividades académicas, como congresos, ponencias, seminarios y talleres. El objetivo principal es proporcionar una plataforma centralizada para la planificación, promoción y gestión de eventos académicos en una institución educativa.
