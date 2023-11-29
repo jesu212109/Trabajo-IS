@@ -16,13 +16,17 @@ Este es un sistema diseñado para gestionar y publicitar actividades académicas
    - Fija aforo, ubicación, precio y derechos de participación.
    - Puede confirmar la preinscripción mediante pago en línea.
 
-3. **Visitantes:**
+3. **Visitante:**
    - Pueden visualizar la información general de los eventos.
    - No tienen la opción de preinscribirse.
 
-4. **Registrados:**
+4. **Registrado:**
    - Pueden realizar preinscripciones si hay aforo disponible.
    - Reciben certificados de asistencia a las actividades preinscritas.
+  
+5. **Ponente:**
+   - Enacargado de llevar a cabo la actividad académica.
+   - Función de informar acerca de la actividad académica.
 
 ### Sistema de Preinscripción y Mailing
 
