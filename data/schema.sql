@@ -73,5 +73,3 @@ CREATE TABLE Correos (
     Enviado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
 );
-
-certificadoscertificadosIDCertificado
