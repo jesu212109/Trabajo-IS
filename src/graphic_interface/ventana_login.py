@@ -9,6 +9,15 @@ class LoginApp:
         self.cursor = cursor
         self.root.title("Login App")
         self.root.geometry("1920x1080")
+        
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+
+        # Calcula las coordenadas para centrar la ventana
+        x = (screen_width - 400) // 2
+        y = (screen_height - 200) // 2
+
+        self.root.geometry(f"400x200+{x}+{y}")
 
         self.create_widgets()
 
