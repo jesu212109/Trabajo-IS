@@ -3,7 +3,8 @@ from tkinter import messagebox
 from sql.sql_queries import *
 from sql.sql_inserts import *
 from sql.sql_functions import *
-from app.screens.organizer import OrganizerScreen
+from app.screens.organizer import *
+from app.screens.directoracademico import *
 
 
 class LoginApp:
@@ -80,6 +81,10 @@ class LoginApp:
     def open_organizer_screen(self, organizer_name):
         organizer_window = tk.Toplevel(self.root)  # Utiliza Toplevel en lugar de Tk
         organizer_screen = OrganizerScreen(self.cursor, organizer_window, organizer_name)
+        
+    def open_academic_director_screen(self, director_name):
+        director_window = tk.Toplevel(self.root)  # Utiliza Toplevel en lugar de Tk
+        academic_director_screen = AcademicDirectorScreen(self.cursor, director_window, director_name)
 
     def open_success_screen(self, user_data):
         # Cerrar la ventana actual
