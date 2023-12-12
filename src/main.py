@@ -1,6 +1,6 @@
 from classes.usuario import Usuario
 from sql.sql_functions import *
-from graphic_interface.ventana_login import LoginApp
+from app.screens.login import LoginApp
 import tkinter as tk
 
 def main():
