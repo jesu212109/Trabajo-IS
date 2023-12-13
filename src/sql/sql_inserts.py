@@ -16,38 +16,15 @@ def insertar_nombre_actividad(cursor, nombre_actividad):
 
         # Confirmar la transacción
         cursor._connection.commit()
-        
 
     except Exception as e:
         raise e
     
-import datetime
-
-import datetime
-
-def insertar_nombre_actividad(cursor, nombre_actividad):
-    try:
-        # Consulta para insertar el nombre de la actividad en la tabla Eventos
-        query = """
-            INSERT INTO Eventos (Titulo, Descripcion, FechaInicio, FechaFin, Aforo, Ubicacion, Precio, DerechosParticipacion, IDUsuarioOrganizador)
-            VALUES (%s, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
-        """
-
-        # Parámetros para la consulta
-        values = (nombre_actividad,)
-
-        # Ejecutar la consulta
-        cursor.execute(query, values)
-
-        # Confirmar la transacción
-        cursor._connection.commit()
-
-    except Exception as e:
-        raise e
-    
-import datetime
 
 def insertar_evento(cursor, titulo, descripcion, fecha_inicio, fecha_fin, aforo, ubicacion, precio, derechos):
+    
+    s = "El evento no está registrado en la base de datos"
+    
     try:
         # Validar las fechas
         try:
@@ -60,19 +37,16 @@ def insertar_evento(cursor, titulo, descripcion, fecha_inicio, fecha_fin, aforo,
         cursor.execute("SELECT * FROM Eventos WHERE Titulo = %s", (titulo,))
         existing_event = cursor.fetchone()
 
+        # Si el evento ya existe, realizar una actualización
         if existing_event:
-            # Si el evento ya existe, realizar una actualización
             query = """
                 UPDATE Eventos
                 SET Descripcion = %s, FechaInicio = %s, FechaFin = %s, Aforo = %s, Ubicacion = %s, Precio = %s, DerechosParticipacion = %s
                 WHERE Titulo = %s
             """
             values = (descripcion, fecha_inicio, fecha_fin, aforo, ubicacion, precio, derechos, titulo)
-
-            # Leer los resultados de la consulta SELECT antes de realizar la actualización
-            cursor.fetchall()
         else:
-            raise e
+            raise ValueError("El evento no está registrado en la base de datos.")
 
         # Ejecutar la consulta
         cursor.execute(query, values)
