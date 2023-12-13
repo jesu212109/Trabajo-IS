@@ -20,5 +20,3 @@ def test_segmentar_por_ubicacion(email_segmentation):
     # Verifica que los usuarios esperados estén en el resultado
     assert 'usuario1@example.com' in resultado
     assert 'usuario2@example.com' not in resultado
-
-# Puedes ejecutar estas pruebas con el comando `pytest` en tu terminal.
