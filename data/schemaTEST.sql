@@ -26,13 +26,6 @@ CREATE TABLE Eventos (
     Ubicacion VARCHAR(100) NOT NULL,
     Precio DECIMAL(10, 2) NOT NULL,
     DerechosParticipacion TEXT,
-    Estado ENUM(
-        'Planificacion',
-        'Inscripcion',
-        'EnCurso',
-        'Finalizado'
-    ) DEFAULT 'Planificacion',
-    IDUsuarioOrganizador INT,
     FOREIGN KEY (IDUsuarioOrganizador) REFERENCES Usuarios(IDUsuario)
 );
 

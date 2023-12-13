@@ -49,4 +49,3 @@ class VisitorScreen:
         for event in events_data:
             self.tree.insert("", "end", values=event[1:])  # Excluir la primera columna (IDEvento)
 
-# Resto del código de tu aplicación...

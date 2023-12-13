@@ -72,8 +72,6 @@ class LoginApp:
             self.open_visitor_screen(nombre)
         elif rol == "DirectorAcademico":
             self.open_academic_director_screen(nombre)
-        elif rol == "Ponente":
-            self.open_speaker_screen(nombre)
         elif rol == "Registrado":
             self.open_registered_screen(nombre)
         else:
