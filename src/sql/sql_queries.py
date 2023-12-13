@@ -5,3 +5,10 @@ def buscar_usuario_por_credenciales(cursor, correo_electronico, contraseña): # 
     cursor.execute(query)
     resultado = cursor.fetchone()
     return resultado
+
+
+def consulta_actividades_academicas(cursor):
+
+    cursor.execute("SELECT * FROM Eventos")
+    activities = cursor.fetchall()
+    return activities
