@@ -19,3 +19,7 @@ class Usuario:
             return Usuario(id_usuario, nombre, correo_electronico, contraseña, rol)
         else:
             return None
+    
+    def actualizar_informacion(self, nuevo_nombre):
+        self.nombre = nuevo_nombre
+        return None
