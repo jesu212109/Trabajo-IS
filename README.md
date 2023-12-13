@@ -23,10 +23,6 @@ Este es un sistema diseñado para gestionar y publicitar actividades académicas
 4. **Registrado:**
    - Pueden realizar preinscripciones si hay aforo disponible.
    - Reciben certificados de asistencia a las actividades preinscritas.
-  
-5. **Ponente:**
-   - Enacargado de llevar a cabo la actividad académica.
-   - Función de informar acerca de la actividad académica.
 
 ### Sistema de Preinscripción y Mailing
 
