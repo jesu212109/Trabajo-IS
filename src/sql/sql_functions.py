@@ -19,7 +19,7 @@ def disconnect_db(conexion): # Desconecta la base de datos
 def close_cursor(cursor): # Cierra el cursor
     cursor.close()
     
-def connect_testing_db():  # Establecer la conexión con la base de datos
+def connect_testing_db():  # Establecer la conexión con la base de datos de testeo
     conexion = mysql.connector.connect(
         host="localhost",
         user="root",
