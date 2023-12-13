@@ -3,7 +3,6 @@ class EmailSegmentation:
         self.emails = {
             'usuario1@example.com': {'nombre': 'Usuario1', 'edad': 25, 'ubicacion': 'Ciudad A'},
             'usuario2@example.com': {'nombre': 'Usuario2', 'edad': 35, 'ubicacion': 'Ciudad B'},
-            # Agrega más usuarios según sea necesario
         }
 
     def segmentar_por_edad(self, edad_limite):
