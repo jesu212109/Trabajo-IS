@@ -21,15 +21,31 @@ class AcademicDirectorScreen:
 
         self.create_widgets()
 
+    def center_window(self):
+        # Obtener el ancho y alto de la pantalla
+        screen_width = self.master.winfo_screenwidth()
+        screen_height = self.master.winfo_screenheight()
+
+        # Obtener el ancho y alto del marco principal
+        frame_width = self.master.winfo_reqwidth()
+        frame_height = self.master.winfo_reqheight()
+
+        # Calcular las coordenadas x y y para centrar la ventana
+        x = int((screen_width - frame_width) / 2)
+        y = int((screen_height - frame_height) / 2)
+
+        # Establecer la geometría de la ventana centrada
+        self.master.geometry(f"+{x}+{y}")
+
     def create_widgets(self):
         # Marco principal con fondo blanco
         main_frame = tk.Frame(self.master, bg='white')
-        main_frame.pack(expand=True, fill='both')
+        main_frame.pack(expand=True, fill='both', pady=(50, 0))  # Añadido pady para aumentar el espacio superior
 
-        # Centrar verticalmente todos los elementos
-        y_padding = int(self.master.winfo_screenheight() * 0.25)
+        # Llamar a la función para centrar la ventana
+        self.center_window()
 
-        tk.Label(main_frame, text=f"Bienvenido, {self.director_name} (Director Académico)").pack(pady=y_padding)
+        tk.Label(main_frame, text=f"Bienvenido, {self.director_name} (Director Académico)").pack(pady=50)
 
         tk.Label(main_frame, text="Crear Nuevo Evento Académico", font=('Arial', 16, 'bold')).pack(pady=10)
 

@@ -6,6 +6,7 @@ from sql.sql_functions import *
 from app.screens.organizer import *
 from app.screens.directoracademico import *
 from app.screens.visitante import *
+from app.screens.registrado import *
 
 
 class LoginApp:
@@ -88,6 +89,10 @@ class LoginApp:
     def open_visitor_screen(self, visitor_name):
         visitor_window = tk.Toplevel(self.root)  # Utiliza Toplevel en lugar de Tk
         visitor_screen = VisitorScreen(self.cursor, visitor_window, visitor_name)
+        
+    def open_registered_screen(self, registered_name):
+        registered_window = tk.Toplevel(self.root)
+        registered_screen = RegisteredScreen(self.cursor, registered_window, registered_name)
 
     def open_success_screen(self, user_data):
         # Cerrar la ventana actual

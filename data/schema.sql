@@ -37,8 +37,6 @@ CREATE TABLE Preinscripciones (
     IDUsuarioRegistrado INT,
     FechaPreinscripcion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Confirmado BOOLEAN DEFAULT 0,
-    FOREIGN KEY (IDUsuarioRegistrado) REFERENCES Usuarios(IDUsuario),
-    FOREIGN KEY (IDEvento) REFERENCES Eventos(IDEvento)
 );
 
 -- Tabla de Ponentes
