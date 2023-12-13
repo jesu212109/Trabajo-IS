@@ -19,3 +19,4 @@ def test_estado_inicial_preinscripcion():
     assert preinscripcion.estado is False
     assert preinscripcion.fecha_inscripcion is None
     assert preinscripcion.detalles_pago == ""
+    
