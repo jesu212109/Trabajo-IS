@@ -57,4 +57,23 @@ def insertar_evento(cursor, titulo, descripcion, fecha_inicio, fecha_fin, aforo,
         print(f"Evento '{titulo}' insertado/actualizado exitosamente.")
     except Exception as e:
         raise e
+    
+def insertar_preinscripcion(cursor, id_usuario, id_evento):
+    try:
+        # Verificar si ya existe una preinscripción para el usuario y evento especificados
+        cursor.execute("SELECT * FROM Preinscripciones WHERE IDUsuarioRegistrado = %s AND IDEvento = %s", (id_usuario, id_evento))
+        existing_preinscription = cursor.fetchone()
+
+        if existing_preinscription:
+            raise ValueError("Ya estás preinscrito en esta actividad.")
+        else:
+            # Insertar nueva preinscripción
+            cursor.execute("INSERT INTO Preinscripciones (IDEvento, IDUsuarioRegistrado) VALUES (%s, %s)", (id_evento, id_usuario))
+
+            # Confirmar la transacción
+            cursor._connection.commit()
+
+            print("Preinscripción exitosa.")
+    except Exception as e:
+        raise e
 
