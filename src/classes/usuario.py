@@ -60,7 +60,7 @@ class Usuario:
         to_address = correo_destinatario
         
         subject = "Actividades académicas disponibles"
-        body = "Hay nuevas actividades académicas disponibles, echa un vistazo en astralacademy"
+        body = "Hay nuevas actividades académicas disponibles relacionadas con tu facultad, echa un vistazo en el software de astralacademy"
 
         message = MIMEMultipart()
         message["From"] = from_address
